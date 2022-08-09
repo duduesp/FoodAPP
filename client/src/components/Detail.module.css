@@ -1,0 +1,70 @@
+.divUno{
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: space-between;
+    justify-content: space-evenly;
+}
+.divDos{
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 20px;
+    backdrop-filter: blur(5px);
+    background: rgba(255,255,255,0.7);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    justify-content: space-evenly;
+    margin: 10px;
+}
+.divTres{
+    height: auto;
+    width: 35rem;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 0 20px 20px 20px;
+    backdrop-filter: blur(5px);
+    background: rgba(255,255,255,0.7);
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    justify-content: space-evenly;
+    margin: 10px;
+}
+.divGen{
+    height: 110%;
+    width: 100%;
+    display: absolute;
+    background-image: url(./images/landing.avif);
+    background-size: cover;
+    background-position: center;
+    overflow: auto;
+
+}
+.img {
+    border-radius: 20px;
+    border: 2px solid black;
+}
+
+.buttonH{
+    background-color: #c3a776;
+    border-radius: 20px;
+    border: solid black;
+    padding: 10px 7px 10px 7px;
+    box-shadow: 5px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    width: 20%;
+}
+.buttonH:hover{
+    background-color: black;
+    transition-delay: 0.2s;
+    transition: 0.8s;
+    color: white;
+    cursor: pointer;
+    border: solid white;
+}
+.p{
+    margin-top: 0px;
+}
+.divPaginado{
+    border: 2px solid black;
+}

@@ -1,4 +1,4 @@
-const { Diet, Recipe } = require("../db");
+const {Diet, Recipe} = require("../db.js")
 require("dotenv").config();
 const {API_KEY, GET_URL} = process.env;
 const {v4:uuid} = require("UUID");
@@ -27,11 +27,13 @@ const getAllRecipes = async (req, res) => {
         const dbInfo = await Recipe.findAll({include: Diet})
         const dbData = dbInfo.map(e => {
           return e.dataValues
+          //el método findAll no solo te trae la información si no también la instancia de modelo
+          // y un montón de información que no necesitamos
         })
         const totalInfo = dbData?.concat(sinBasura);
         return totalInfo;
         } catch (e) {
-    res.status(400).send("No hay recetas, tío.")
+    res.status(400).send("No hay recetas, MEN.")
 }
 }
 
@@ -52,7 +54,7 @@ const getByName = async (req, res) => {
             filtred.length > 0 ? res.send(filtred) : res.status(404).send("No se encontró MAN")
         }
     } catch (e) {
-        console.log("Error MAN")
+        console.log("Error API. Creo que te quedaste sin request OTRA VEZ....")
     }
 }
 
@@ -65,6 +67,7 @@ const getById = async (req, res) => {
                 title: apiId.data.title,
                 image: apiId.data.image,
                 dietTypes: apiId.data.diets,
+                dishTypes: apiId.data.dishTypes,
                 summary: apiId.data.summary,
                 healthScore: apiId.data.healthScore,
                 steps: apiId.data.analyzedInstructions[0]?.steps.map(e => {
@@ -83,33 +86,44 @@ const getById = async (req, res) => {
             res.send(dbId)
         }
     } catch (e) {
-        res.status(404).send("Poné bien el ID MAN")
+        res.status(404).send("Poné bien el ID MEN")
     }
 }
 
-
  const postRecipes = async (req, res) => {
     try {
-         const {title, summary, healthScore, steps, diets} = req.body;
+         const {title, summary, healthScore, steps, diets, image} = req.body;
          const id = uuid();
          const newRecipe = await Recipe.create({
             id: id,
             title: title,
+            image: image,
             summary: summary,
             healthScore: healthScore,
             steps: steps,
-        })  
-        diets.map(d => newRecipe.addDiet(d))
-        res.status(200).send("Receta creada correctamente.")
-    } catch (e) {
-         res.status(400).send("Receta ya creada/ receta incorrecta.")
-     }
+        })
+            diets.map(d => newRecipe.addDiet(d))
+            // add es un método que agrega relación entre las tablas. Siempre y cuando tengas relacionadas las tablas.
+            res.send("Receta creada correctamente.")
+    } catch(e) {
+        console.log(e.message)
+    }
  }
+ const deleteRecipe = async (req, res) => {
+         let {id} = req.params;
+             await Recipe.destroy({
+                where: {
+                    id: id,
+                }
+            })
+               res.status(204).send();
+            }   
 
+  
 module.exports = {
     getAllRecipes,
     postRecipes,
     getByName,
     getById,
-
+    deleteRecipe,
   };

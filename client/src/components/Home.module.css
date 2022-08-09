@@ -1,0 +1,135 @@
+.bg{
+    height: 100vh;
+    width: 100%;
+    display: flex !important;
+    flex-direction: column;
+    background: linear-gradient(rgba(5, 7, 12, 0.2), rgba(5, 7, 12, 0.2)),
+    url(../components/images/landing.avif);
+    background-size: cover;
+    overflow: auto;
+    padding: 15px 30px;
+    position: absolute;
+}
+.select{
+    background-color: #c3a776;;
+    border-radius: 20px;
+    border: solid black;
+    padding: 10px 7px 10px 7px;
+    box-shadow: 5px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+.select:hover{
+    background-color: black;
+    transition-delay: 0.2s;
+    transition: 0.8s;
+    color: white;
+    cursor: pointer;
+    border: solid white;
+}
+.divSelect{
+    background-color: transparent;
+    border-radius: 20px;
+    border: 2px solid #000000;
+    display: flex;
+    align-items: center;
+    align-content: stretch;
+    justify-content: center;
+    place-content: space-around;
+    padding: 15px 0px 15px 0px;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    
+
+}
+.divCard{
+    width: 75rem;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-decoration: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    border: 2px solid black;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    padding-bottom: 20px;
+    
+}
+.card{
+    padding: 1px;   
+}
+.link {
+    width: 1px;
+    height: 1px;
+}
+.contDiv{
+    margin: 1px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+.divNav{
+    display: flex;
+}
+.divPaginado{
+    display: flex;
+    flex-direction: row;
+    align-content: stretch;
+    justify-content: center;
+    align-items: center;
+}
+.btnPag{
+    height: 40px;
+    background-color: #c3a776;
+    border-radius: 20px;
+    border: solid black;
+    padding: 10px 7px 10px 7px;
+    font-weight: bold;
+    box-shadow: 5px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.btnPag:hover{
+    background-color: black;
+    transition-delay: 0.2s;
+    transition: 0.8s;
+    color: white;
+    cursor: pointer;
+    border: solid white;
+}
+
+button{
+    background-color: #c3a776;
+    border-radius: 20px;
+    border: solid black;
+    padding: 10px 7px 10px 7px;
+    box-shadow: 5px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.button:hover{
+    background-color: black;
+    transition-delay: 0.2s;
+    transition: 0.8s;
+    color: white;
+    cursor: pointer;
+    border: solid white;
+}
+ button:focus {
+    background-color: black;
+    transition-delay: 0.2s;
+    transition: 0.8s;
+    color: white;
+    cursor: pointer;
+    border: solid white;
+}
+
+button:active {
+    background-color: black;
+    transition-delay: 0.2s;
+    transition: 0.8s;
+    color: white;
+    cursor: pointer;
+    border: solid white;
+} 

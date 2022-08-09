@@ -1,0 +1,97 @@
+button{
+    background-color: #c3a776;
+    border-radius: 20px;
+    border: solid black;
+    padding: 10px 7px 10px 7px;
+    box-shadow: 5px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.button:hover{
+    background-color: #000000;
+    border: solid white;
+    transition-delay: 0.2s;
+    transition: 0.8s;
+    color: white;
+    cursor: pointer;
+}
+
+.divGen{
+    height: auto;
+    width: 30rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 3px solid black;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+    background: rgba(255,255,255,0.4);
+    backdrop-filter: blur(5px);
+}
+
+.bg{
+    height: 100vh;
+    width: 100%;
+    display: absolute;
+    background: linear-gradient(rgba(5, 7, 12, 0.2), rgba(5, 7, 12, 0.2)),
+    url(../components/images/landing.avif);
+    background-size: cover;
+    background-position: center;
+    overflow: auto;
+    padding: 30px;
+    display: grid;
+}
+.form{
+    margin: 1px;
+}
+.input {
+    margin: 10px;
+}
+
+.label{
+    margin: 1px;
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+}
+.input2{
+    margin: 10px;
+    width: 90%;
+    height: 10%;
+}
+.divBtn{
+    margin: 15px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+}
+.divDel{
+    margin: 1px;
+    display: flex;
+    font-size: 18px;
+    align-items: center;
+}
+.butDel{
+    height: 30px;
+    width: 30px;
+    background-color: #c3a776;
+    border-radius: 20px;
+    border: solid black;
+    padding: 10px 7px 10px 7px;
+    box-shadow: 5px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 7px;
+}
+.butDel:hover{
+    background-color: #000000;
+    border: solid white;
+    transition-delay: 0.2s;
+    transition: 0.8s;
+    color: white;
+    cursor: pointer;
+}

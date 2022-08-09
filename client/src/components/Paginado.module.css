@@ -1,0 +1,54 @@
+.paginado{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 0px
+}
+
+.li{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.btnPag{
+    height: 40px;
+    width: 40px;
+    background-color: #c3a776;
+    border-radius: 20px;
+    border: solid black;
+    padding: 10px 7px 10px 7px;
+    font-weight: bold;
+    box-shadow: 5px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column-reverse;
+    align-content: center;
+    align-items: center;
+}
+.btnPag:hover{
+    background-color: black;
+    transition-delay: 0.2s;
+    transition: 0.8s;
+    color: white;
+    cursor: pointer;
+    border: solid white;
+}
+.btnSelec{
+    height: 40px;
+    width: 40px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border: solid white;
+}
+.divPag{
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: space-evenly;
+    align-items: center;
+} 

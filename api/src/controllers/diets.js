@@ -19,11 +19,8 @@ const {v4:uuid} = require("UUID");
 const getDiets = async (req, res) => {
     try {
         const dietList = await Diet.findAll();
-        
         if(dietList.length > 0) {
-            console.log("entré al if de ruta")
             res.send(dietList)
-            
         } else {
             let dietsApi = [
                 {name:'gluten free'}, 
@@ -44,7 +41,6 @@ const getDiets = async (req, res) => {
     } catch (e) {
         res.status(400).send("Receta ya creada/ receta incorrecta.")
     }
-
 } 
 
 module.exports = {

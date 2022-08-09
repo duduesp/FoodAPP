@@ -12,5 +12,9 @@ module.exports = (sequelize) => {
             type: DataTypes.STRING,
             allowNull: false,
         }
-    })
+    },
+    {
+        timestamps: false
+        //es para que no aparezca la info de la hora y fecha de creacion
+      })
 }
